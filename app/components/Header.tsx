@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Form, Link } from "@remix-run/react";
 
 export default function Header() {
   return (
@@ -6,9 +6,11 @@ export default function Header() {
       <div>
         <Link to={"/"}>Home</Link>
       </div>
-      <div>
-        <Link to={"/login"}>Login</Link>
-      </div>
+      <Form method="post">
+        <button type="submit" className="button-link">
+          Logout
+        </button>
+      </Form>
     </header>
   );
 }
